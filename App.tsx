@@ -1,14 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
 import { AuthProvider } from './src/auth/AuthContext';
-import { LoginPage } from './src/components/LoginPage';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
+import * as eva from '@eva-design/eva';
+import { Main } from './src/Main';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
 
-export default function App() {
-
+const App = () => {
   return (
-    <AuthProvider>
-      <StatusBar />
-      <LoginPage />
-    </AuthProvider>
+    <>
+      <IconRegistry icons={EvaIconsPack} />
+      <ApplicationProvider {...eva} theme={eva.light} >
+        <AuthProvider>
+          <Main />
+        </AuthProvider>
+      </ApplicationProvider>
+    </>
   );
 }
+
+export default App
 
