@@ -3,6 +3,7 @@ import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import * as eva from '@eva-design/eva';
 import { Main } from './src/Main';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import { SafeAreaView } from 'react-native';
 
 const App = () => {
   return (

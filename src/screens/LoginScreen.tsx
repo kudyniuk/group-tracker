@@ -1,4 +1,4 @@
-import { ImageProps, SafeAreaView } from "react-native"
+import { ImageProps, SafeAreaView, View } from "react-native"
 import { useAuth } from "../auth"
 import { Button, Icon } from "@ui-kitten/components"
 import { StyleSheet } from 'react-native'
@@ -12,9 +12,9 @@ const GoogleIcon: AcessoryComponent = (props) => (
 export const LoginScreen = () => {
     const { googleSignIn } = useAuth()
 
-    return <SafeAreaView style={styles.container}>
+    return <View style={styles.container}>
         <Button accessoryLeft={GoogleIcon} onPress={googleSignIn}>Google Sign In</Button>
-    </SafeAreaView>
+    </View>
 }
 
 
@@ -24,10 +24,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    avatar: {
-        width: 80,
-        height: 80,
-        borderRadius: 40
     }
 });

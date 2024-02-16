@@ -18,14 +18,10 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({ navigation, state }) => (
 );
 
 export const HomeScreen = () => {
-    return <SafeAreaView style={{ flex: 1 }}>
-        <NavigationContainer>
-            <Navigator tabBar={props => <BottomTabBar {...props} />}>
-                <Screen name='Groups' component={GroupsScreen} />
-                <Screen name='Map' component={MapScreen} />
-            </Navigator>
-        </NavigationContainer>
-    </SafeAreaView>
+    return <Navigator tabBar={props => <BottomTabBar {...props} />}>
+        <Screen name='Groups' component={GroupsScreen} />
+        <Screen name='Map' component={MapScreen} />
+    </Navigator>
 }
 
 
