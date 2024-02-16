@@ -1,21 +1,21 @@
-import { AuthProvider } from './src/auth/AuthContext';
-import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
-import * as eva from '@eva-design/eva';
-import { Main } from './src/Main';
-import { EvaIconsPack } from '@ui-kitten/eva-icons';
-import { SafeAreaView } from 'react-native';
+import * as eva from "@eva-design/eva"
+import { ApplicationProvider, IconRegistry } from "@ui-kitten/components"
+import { EvaIconsPack } from "@ui-kitten/eva-icons"
+
+import { AuthProvider } from "@own/auth"
+import { Main } from "@own/Main"
 
 const App = () => {
-  return (
-    <>
-      <IconRegistry icons={EvaIconsPack} />
-      <ApplicationProvider {...eva} theme={eva.light} >
-        <AuthProvider>
-          <Main />
-        </AuthProvider>
-      </ApplicationProvider>
-    </>
-  );
+	return (
+		<>
+			<IconRegistry icons={EvaIconsPack} />
+			<ApplicationProvider {...eva} theme={eva.light} >
+				<AuthProvider>
+					<Main />
+				</AuthProvider>
+			</ApplicationProvider>
+		</>
+	)
 }
 
 export default App

@@ -1,2 +1,2 @@
-export * from './GroupCard'
-export * from './AvatarMarker'
+export * from "./AvatarMarker"
+export * from "./GroupCard"

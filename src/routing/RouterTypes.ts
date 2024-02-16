@@ -1,8 +1,10 @@
-import { Group } from "@own/types";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
-import { FC } from "react";
-import { CompositeScreenProps, NavigatorScreenParams } from "@react-navigation/native";
+import { FC } from "react"
+
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
+import { CompositeScreenProps, NavigatorScreenParams } from "@react-navigation/native"
+import { NativeStackScreenProps } from "@react-navigation/native-stack"
+
+import { Group } from "@own/types"
 
 export type HomeStackParamList = {
     Groups: undefined;

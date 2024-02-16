@@ -1,1 +1,1 @@
-export * from './createCollectionSubscription'
+export * from "./createCollectionSubscription"
