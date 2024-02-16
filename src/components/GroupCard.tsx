@@ -7,7 +7,7 @@ import { useAppNavigation } from "@own/routing"
 import { Group } from "@own/types"
 
 type Props = {
-	group: Group
+    group: Group
 }
 
 export const GroupCard: React.FC<Props> = ({ group }) => {
@@ -25,7 +25,7 @@ export const GroupCard: React.FC<Props> = ({ group }) => {
                     {active ? "Stop Tracking" : "Track"}
                 </Button>
                 <Button size="small" status="warning" onPress={() => navigate("Group", { group })}>
-					Settings
+                    Settings
                 </Button>
             </View>
         )

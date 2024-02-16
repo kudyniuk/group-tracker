@@ -6,8 +6,8 @@ import { GoogleSignin } from "@react-native-google-signin/google-signin"
 GoogleSignin.configure()
 
 type AuthContext = {
-	user?: FirebaseAuthTypes.UserCredential
-	googleSignIn: () => Promise<void>
+    user?: FirebaseAuthTypes.UserCredential
+    googleSignIn: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContext | undefined>(undefined)

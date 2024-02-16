@@ -4,7 +4,7 @@ import { Pressable, StyleSheet, View } from "react-native"
 import { Avatar, Layout, Popover, Text } from "@ui-kitten/components"
 
 type Props = {
-	text: string
+    text: string
 }
 
 export const AvatarMarker: React.FC<Props> = ({ text }) => {

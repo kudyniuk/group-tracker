@@ -1,7 +1,7 @@
 import { createCollectionSubscription } from "./utils"
 
 type Group = {
-	name: string
+    name: string
 }
 
 export const useGroups = createCollectionSubscription<Group[]>("groups")

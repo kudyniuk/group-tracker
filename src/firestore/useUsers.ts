@@ -5,8 +5,8 @@ import firestore from "@react-native-firebase/firestore"
 import { User } from "@own/types"
 
 type UseUsers = {
-	data: User[] | null
-	error: Error | null
+    data: User[] | null
+    error: Error | null
 }
 
 export const useUsers = (): UseUsers => {

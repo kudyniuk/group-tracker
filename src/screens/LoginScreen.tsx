@@ -14,7 +14,7 @@ export const LoginScreen = () => {
     return (
         <View style={styles.container}>
             <Button accessoryLeft={GoogleIcon} onPress={googleSignIn}>
-				Google Sign In
+                Google Sign In
             </Button>
         </View>
     )

@@ -10,7 +10,7 @@ import { HomeScreen } from "@own/routing"
 
 const TILES_OPEN_SEA_MAP = "https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png"
 const WMS_DEPTH =
-	"https://ows.emodnet-bathymetry.eu/wms?service=WMS&service=WMS&request=GetMap&version=1.3.0&layers=emodnet:mean_multicolour&styles=&format=image/png&transparent=true&info_format=text/html&tiled=false&width={width}&height={height}&srs=EPSG:3857&bbox={minX},{minY},{maxX},{maxY}"
+    "https://ows.emodnet-bathymetry.eu/wms?service=WMS&service=WMS&request=GetMap&version=1.3.0&layers=emodnet:mean_multicolour&styles=&format=image/png&transparent=true&info_format=text/html&tiled=false&width={width}&height={height}&srs=EPSG:3857&bbox={minX},{minY},{maxX},{maxY}"
 
 export const MapScreen: HomeScreen.Map = () => {
     const { data } = useUsers()
