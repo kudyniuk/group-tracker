@@ -9,22 +9,22 @@ type AcessoryComponent = Button["props"]["accessoryLeft"]
 const GoogleIcon: AcessoryComponent = (props) => <Icon name="google" {...props} />
 
 export const LoginScreen = () => {
-	const { googleSignIn } = useAuth()
+    const { googleSignIn } = useAuth()
 
-	return (
-		<View style={styles.container}>
-			<Button accessoryLeft={GoogleIcon} onPress={googleSignIn}>
+    return (
+        <View style={styles.container}>
+            <Button accessoryLeft={GoogleIcon} onPress={googleSignIn}>
 				Google Sign In
-			</Button>
-		</View>
-	)
+            </Button>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-	},
+    container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+    },
 })
