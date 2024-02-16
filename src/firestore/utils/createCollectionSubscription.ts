@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import firestore from "@react-native-firebase/firestore"
 
 export const createCollectionSubscription =
-	<Result>(collection: string) =>
+    <Result>(collection: string) =>
         () => {
             const [data, setData] = useState<Result | null>(null)
             const [error, setError] = useState<Error | null>(null)
