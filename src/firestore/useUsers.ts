@@ -1,6 +1,6 @@
 import firestore from '@react-native-firebase/firestore';
 import { useEffect, useState } from 'react';
-import { User } from '../types/User';
+import { User } from '@own/types';
 
 
 type UseUsers = {

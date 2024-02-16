@@ -1,18 +1,18 @@
 import { Layout } from "@ui-kitten/components"
 import MapView, { Marker, Polyline, UrlTile, WMSTile } from 'react-native-maps'
 import { StyleSheet } from 'react-native'
-import { AvatarMarker } from "../../components"
-import { useUsers } from "../../firestore"
+import { AvatarMarker } from "@own/components"
+import { useUsers } from "@own/firestore"
 import { Fragment } from "react"
+import { HomeScreen } from "@own/routing"
 
 
 
 const TILES_OPEN_SEA_MAP = 'https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png'
 const WMS_DEPTH = 'https://ows.emodnet-bathymetry.eu/wms?service=WMS&service=WMS&request=GetMap&version=1.3.0&layers=emodnet:mean_multicolour&styles=&format=image/png&transparent=true&info_format=text/html&tiled=false&width={width}&height={height}&srs=EPSG:3857&bbox={minX},{minY},{maxX},{maxY}'
 
-export const MapScreen = () => {
+export const MapScreen: HomeScreen.Map = () => {
     const { data } = useUsers()
-    
 
     return <Layout style={styles.container}>
         {data?.length ? <MapView style={styles.map} initialRegion={{

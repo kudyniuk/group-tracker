@@ -2,20 +2,6 @@ import { View, StyleSheet, Pressable } from 'react-native'
 import { Avatar, Layout, Popover, Text } from "@ui-kitten/components"
 import { useState } from 'react';
 
-const styles = StyleSheet.create({
-    avatar: {
-        borderWidth: 2,
-        borderColor: 'brown'
-    },
-    content: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingHorizontal: 4,
-        paddingVertical: 8,
-    },
-
-});
-
 export const AvatarMarker: React.FC<{ text: string }> = ({ text }) => {
     const [visible, setVisible] = useState(false);
 
@@ -40,3 +26,18 @@ export const AvatarMarker: React.FC<{ text: string }> = ({ text }) => {
         </Popover>
     </View>
 }
+
+
+const styles = StyleSheet.create({
+    avatar: {
+        borderWidth: 2,
+        borderColor: 'brown'
+    },
+    content: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 4,
+        paddingVertical: 8,
+    },
+
+});

@@ -1,16 +1,16 @@
 import { createGroup } from '@own/firestore'
-import { useNavigation } from '@react-navigation/native'
+import { RootScreen, useAppNavigation } from '@own/routing'
 import { Button, Input, Layout, Text } from '@ui-kitten/components'
 import { useState } from 'react'
 
-export const CreateGroupScreen = () => {
+export const CreateGroupScreen: RootScreen.CreateGroup = () => {
     const [name, setName] = useState('')
     const [error, setError] = useState("")
-    const { navigate } = useNavigation() as any
+    const { navigate } = useAppNavigation()
 
     const handleSave = () => {
         createGroup(name).then(() => {
-            navigate('Home')
+            navigate('Home', { screen: 'Groups' })
         }).catch(e => {
             setError(e.message)
         })

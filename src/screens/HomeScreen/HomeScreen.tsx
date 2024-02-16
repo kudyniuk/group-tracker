@@ -1,12 +1,11 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { BottomTabBarProps, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigation, BottomNavigationTab, Layout, Text } from '@ui-kitten/components';
-import { SafeAreaView } from 'react-native';
 import { GroupsScreen } from './GroupsScreen';
 import { MapScreen } from './MapScreen';
+import { HomeStackParamList, RootScreen } from '@own/routing';
 
-const { Navigator, Screen } = createBottomTabNavigator();
+const { Navigator, Screen } = createBottomTabNavigator<HomeStackParamList>();
 
 const BottomTabBar: React.FC<BottomTabBarProps> = ({ navigation, state }) => (
     <BottomNavigation
@@ -17,8 +16,8 @@ const BottomTabBar: React.FC<BottomTabBarProps> = ({ navigation, state }) => (
     </BottomNavigation>
 );
 
-export const HomeScreen = () => {
-    return <Navigator tabBar={props => <BottomTabBar {...props} />}>
+export const HomeScreen: RootScreen.Home = () => {
+    return <Navigator initialRouteName='Groups' tabBar={props => <BottomTabBar {...props} />}>
         <Screen name='Groups' component={GroupsScreen} />
         <Screen name='Map' component={MapScreen} />
     </Navigator>

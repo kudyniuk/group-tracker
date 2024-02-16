@@ -1,7 +1,7 @@
 import { SafeAreaView, StyleSheet } from "react-native"
 import { AuthGuard } from "./auth"
 import { LoginScreen, HomeScreen } from "./screens"
-import { Router } from "./screens/Router"
+import { Router } from "./routing/Router"
 
 export const Main = () => {
     return <SafeAreaView style={{ ...StyleSheet.absoluteFillObject }}>
