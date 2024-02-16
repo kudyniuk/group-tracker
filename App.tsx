@@ -6,16 +6,16 @@ import { AuthProvider } from "@own/auth"
 import { Main } from "@own/Main"
 
 const App = () => {
-	return (
-		<>
-			<IconRegistry icons={EvaIconsPack} />
-			<ApplicationProvider {...eva} theme={eva.light}>
-				<AuthProvider>
-					<Main />
-				</AuthProvider>
-			</ApplicationProvider>
-		</>
-	)
+    return (
+        <>
+            <IconRegistry icons={EvaIconsPack} />
+            <ApplicationProvider {...eva} theme={eva.light}>
+                <AuthProvider>
+                    <Main />
+                </AuthProvider>
+            </ApplicationProvider>
+        </>
+    )
 }
 
 export default App

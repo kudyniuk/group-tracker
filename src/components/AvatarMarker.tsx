@@ -8,34 +8,34 @@ type Props = {
 }
 
 export const AvatarMarker: React.FC<Props> = ({ text }) => {
-	const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(false)
 
-	const renderToggleButton = (): React.ReactElement => (
-		<Pressable onPress={() => setVisible(true)}>
-			<Avatar style={styles.avatar} size="small" source={{ uri: "https://placekitten.com/200/300" }} />
-		</Pressable>
-	)
+    const renderToggleButton = (): React.ReactElement => (
+        <Pressable onPress={() => setVisible(true)}>
+            <Avatar style={styles.avatar} size="small" source={{ uri: "https://placekitten.com/200/300" }} />
+        </Pressable>
+    )
 
-	return (
-		<View>
-			<Popover visible={visible} anchor={renderToggleButton} onBackdropPress={() => setVisible(false)} placement={"top"}>
-				<Layout style={styles.content}>
-					<Text>{text}</Text>
-				</Layout>
-			</Popover>
-		</View>
-	)
+    return (
+        <View>
+            <Popover visible={visible} anchor={renderToggleButton} onBackdropPress={() => setVisible(false)} placement={"top"}>
+                <Layout style={styles.content}>
+                    <Text>{text}</Text>
+                </Layout>
+            </Popover>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-	avatar: {
-		borderWidth: 2,
-		borderColor: "brown",
-	},
-	content: {
-		flexDirection: "row",
-		alignItems: "center",
-		paddingHorizontal: 4,
-		paddingVertical: 8,
-	},
+    avatar: {
+        borderWidth: 2,
+        borderColor: "brown",
+    },
+    content: {
+        flexDirection: "row",
+        alignItems: "center",
+        paddingHorizontal: 4,
+        paddingVertical: 8,
+    },
 })
