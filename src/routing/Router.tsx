@@ -8,11 +8,13 @@ import { RootStackParamList } from "./RouterTypes"
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export const Router = () => {
-	return <NavigationContainer>
-		<Stack.Navigator initialRouteName="Home">
-			<Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} />
-			<Stack.Screen name="CreateGroup" component={CreateGroupScreen} />
-			<Stack.Screen name="Group" options={{ title: "Group Name" }} component={GroupScreen} />
-		</Stack.Navigator>
-	</NavigationContainer>
+	return (
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName="Home">
+				<Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} />
+				<Stack.Screen name="CreateGroup" component={CreateGroupScreen} />
+				<Stack.Screen name="Group" options={{ title: "Group Name" }} component={GroupScreen} />
+			</Stack.Navigator>
+		</NavigationContainer>
+	)
 }

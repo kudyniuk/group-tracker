@@ -9,7 +9,7 @@ const App = () => {
 	return (
 		<>
 			<IconRegistry icons={EvaIconsPack} />
-			<ApplicationProvider {...eva} theme={eva.light} >
+			<ApplicationProvider {...eva} theme={eva.light}>
 				<AuthProvider>
 					<Main />
 				</AuthProvider>
@@ -19,4 +19,3 @@ const App = () => {
 }
 
 export default App
-

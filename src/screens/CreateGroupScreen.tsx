@@ -11,16 +11,20 @@ export const CreateGroupScreen: RootScreen.CreateGroup = () => {
 	const { navigate } = useAppNavigation()
 
 	const handleSave = () => {
-		createGroup(name).then(() => {
-			navigate("Home", { screen: "Groups" })
-		}).catch(e => {
-			setError(e.message)
-		})
+		createGroup(name)
+			.then(() => {
+				navigate("Home", { screen: "Groups" })
+			})
+			.catch((e) => {
+				setError(e.message)
+			})
 	}
 
-	return <Layout style={{ flex: 1, padding: 12, gap: 8 }}>
-		<Input onChangeText={setName} label="Group name" placeholder='A very nice group' />
-		{error ? <Text>{error}</Text> : null}
-		<Button onPress={handleSave}>Create</Button>
-	</Layout>
+	return (
+		<Layout style={{ flex: 1, padding: 12, gap: 8 }}>
+			<Input onChangeText={setName} label="Group name" placeholder="A very nice group" />
+			{error ? <Text>{error}</Text> : null}
+			<Button onPress={handleSave}>Create</Button>
+		</Layout>
+	)
 }

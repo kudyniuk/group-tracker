@@ -3,7 +3,6 @@ import { createContext, PropsWithChildren, useContext, useState } from "react"
 import auth, { FirebaseAuthTypes } from "@react-native-firebase/auth"
 import { GoogleSignin } from "@react-native-google-signin/google-signin"
 
-
 GoogleSignin.configure()
 
 type AuthContext = {
@@ -26,10 +25,7 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
 		setUser(user)
 	}
 
-
-	return <AuthContext.Provider value={{ user, googleSignIn }}>
-		{children}
-	</AuthContext.Provider>
+	return <AuthContext.Provider value={{ user, googleSignIn }}>{children}</AuthContext.Provider>
 }
 
 export const useAuth = () => {
