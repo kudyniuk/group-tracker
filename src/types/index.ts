@@ -1,3 +1,3 @@
-export * from './AcessoryComponent'
-export * from './User'
-export * from './Group'
+export * from "./AcessoryComponent"
+export * from "./Group"
+export * from "./User"

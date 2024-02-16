@@ -1,28 +1,30 @@
-import { ImageProps, SafeAreaView, View } from "react-native"
-import { useAuth } from "../auth"
+import { StyleSheet, View } from "react-native"
+
 import { Button, Icon } from "@ui-kitten/components"
-import { StyleSheet } from 'react-native'
 
-type AcessoryComponent = Button['props']['accessoryLeft']
+import { useAuth } from "../auth"
 
-const GoogleIcon: AcessoryComponent = (props) => (
-    <Icon name='google' {...props} />
-);
+type AcessoryComponent = Button["props"]["accessoryLeft"]
+
+const GoogleIcon: AcessoryComponent = (props) => <Icon name="google" {...props} />
 
 export const LoginScreen = () => {
-    const { googleSignIn } = useAuth()
+	const { googleSignIn } = useAuth()
 
-    return <View style={styles.container}>
-        <Button accessoryLeft={GoogleIcon} onPress={googleSignIn}>Google Sign In</Button>
-    </View>
+	return (
+		<View style={styles.container}>
+			<Button accessoryLeft={GoogleIcon} onPress={googleSignIn}>
+				Google Sign In
+			</Button>
+		</View>
+	)
 }
 
-
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
-});
+	container: {
+		flex: 1,
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+})
